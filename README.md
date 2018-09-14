@@ -9,10 +9,18 @@ https://map-grid.livemap.gl/
 
 You can toggle the algorithm with the button located at the top-right.
 
+#### Toxelgrid
+
+![toxelgrid](https://github.com/veridict/map-grid/blob/master/img/toxelgrid.png?raw=true)
+
 #### Quadtree
 
-![quadtree](https://raw.githubusercontent.com/missinglink/leaflet-spatial-prefix-tree/master/img/quadtree.png)
+![quadtree](https://github.com/veridict/map-grid/blob/master/img/quadtree.png?raw=true)
 
 #### Geohash
 
-![geohash](https://raw.githubusercontent.com/missinglink/leaflet-spatial-prefix-tree/master/img/geohash.png)
+![geohash](https://github.com/veridict/map-grid/blob/master/img/geohash.png?raw=true)
+
+#### Slippy tile
+
+![slippytile](https://github.com/veridict/map-grid/blob/master/img/slippytile.png?raw=true)
