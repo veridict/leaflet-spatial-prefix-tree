@@ -85,6 +85,20 @@ var slippyAdapter = {
   }
 };
 
+var toxelAdapter = Object.create(quadAdapter);
+toxelAdapter.labels = function(hash){
+  var labelRange = ['a', 'b', 'c', 'd']
+  var result = hash;
+  for(var i = 0; i < labelRange.length; i++){
+    var re = new RegExp(i.toString(), "g");
+    result = result.replace(re, labelRange[i]);
+  }
+  return {
+    long: 't'+result,
+    short: result.substr(-1, 1)
+  };;
+}
+
 /** Converts numeric degrees to radians */
 if (typeof(Number.prototype.toRad) === "undefined") {
   Number.prototype.toRad = function() {
@@ -194,6 +208,7 @@ var prevHash = 'NOTAHASH';
 var changeHashFunction = function( algorithm ){
   if( algorithm == 'geohash' ) adapter = hashAdapter;
   else if( algorithm == 'slippy' ) adapter = slippyAdapter;
+  else if( algorithm == 'toxel' ) adapter = toxelAdapter;
   else adapter = quadAdapter;
   prevHash = 'NOTAHASH'; // force hash to regenerate
   updateLayer();
@@ -289,7 +304,7 @@ map.on('zoomend', updateLayer);
 map.on('moveend', updateLayer);
 
 // init
-changeHashFunction( 'quadtree' );
+changeHashFunction( 'toxel' );
 // updateLayer();
 
 map.on('mousemove', function( e ){
