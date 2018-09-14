@@ -1,9 +1,9 @@
 
-Leaflet plugin for visualizing spatial prefix trees, quadtree and geohash
+Leaflet plugin for visualizing spatial prefix trees, toxel grid, quadtree and geohash
 
 ### Demo
 
-http://missinglink.github.io/leaflet-spatial-prefix-tree/
+https://map-grid.livemap.gl/
 
 #### Changing Algorithms
 
